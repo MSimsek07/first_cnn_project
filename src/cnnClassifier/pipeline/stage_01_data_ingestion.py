@@ -20,6 +20,7 @@ class DataIngestionTrainingPipeline:
             raise e
 
 
+# We added here "if __name__ == '__main__':" to use with DVC
 if __name__ == '__main__':
     try:
         logger.info(f">>>>>>>> stage {STAGE_NAME} started <<<<<<<<")

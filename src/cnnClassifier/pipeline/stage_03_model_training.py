@@ -1,9 +1,10 @@
 from cnnClassifier.config.configuration import ConfigurationManager
-#from cnnClassifier.components.prepare_callbacks import PrepareCallback
+# from cnnClassifier.components.prepare_callbacks import PrepareCallback
 from cnnClassifier.components.model_training import Training
 from cnnClassifier import logger
 
 STAGE_NAME = "Training"
+
 
 class ModelTrainingPipeline:
     def __init__(self):
@@ -20,6 +21,8 @@ class ModelTrainingPipeline:
         except Exception as e:
             raise e
 
+
+# We added here "if __name__ == '__main__':" to use with DVC
 if __name__ == '__main__':
     try:
         logger.info(f">>>>>>>> stage {STAGE_NAME} started <<<<<<<<")

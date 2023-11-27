@@ -1,9 +1,10 @@
 from cnnClassifier.config.configuration import ConfigurationManager
 from cnnClassifier.components.model_evaluation_mlflow import Evaluation
-from cnnClassifier import logger 
+from cnnClassifier import logger
 
 
 STAGE_NAME = "Evaluation stage"
+
 
 class EvaluationPipeline:
     def __init__(self):
@@ -19,6 +20,8 @@ class EvaluationPipeline:
         except Exception as e:
             raise e
 
+
+# We added here "if __name__ == '__main__':" to use with DVC
 if __name__ == '__main__':
     try:
         logger.info(f">>>>>>>> stage {STAGE_NAME} started <<<<<<<<")
